@@ -1,0 +1,207 @@
+.vocational-services-page {
+  width: 100%;
+}
+
+.service-details {
+  padding: 4rem 0;
+  background-color: var(--color-background);
+  width: 100%;
+}
+
+.service-info {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.main-description {
+  margin-bottom: 2.5rem;
+}
+
+.main-description p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--color-content);
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: rgba(70, 125, 165, 0.1);
+  border-radius: 8px;
+}
+
+.service-description {
+  margin-bottom: 3rem;
+}
+
+.service-description h2,
+.faq-section h2,
+.expert-services h2 {
+  color: var(--color-content);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.service-description h2::after,
+.faq-section h2::after,
+.expert-services h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+.service-description p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.faq-section {
+  margin-bottom: 3rem;
+}
+
+.faq-item {
+  background-color: var(--color-background);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.faq-item h3 {
+  background-color: var(--color-content);
+  color: var(--color-white);
+  padding: 1rem 1.5rem;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.faq-answer {
+  padding: 1.5rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.expert-services {
+  margin-bottom: 3rem;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  background-color: var(--color-background);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.service-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.service-icon::before {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.services-list li div {
+  flex-grow: 1;
+}
+
+.services-list h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-content);
+}
+
+.services-list p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.cta-box {
+  background-color: var(--color-content);
+  color: var(--color-white);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cta-box h3 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.cta-box p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.cta-box .btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-content);
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+}
+
+.cta-box .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .service-info {
+    padding: 1.5rem;
+  }
+  
+  .main-description p {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-description h2::after,
+  .faq-section h2::after,
+  .expert-services h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .service-description h2,
+  .faq-section h2,
+  .expert-services h2 {
+    text-align: center;
+  }
+  
+  .services-list li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .service-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}

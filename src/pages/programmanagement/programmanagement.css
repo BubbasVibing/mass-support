@@ -1,0 +1,156 @@
+.program-management-page {
+  width: 100%;
+}
+
+.service-details {
+  padding: 4rem 0;
+  background-color: var(--color-background);
+  width: 100%;
+}
+
+.service-info {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.intro-section {
+  margin-bottom: 3rem;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+.why-choose-section,
+.services-section {
+  margin-bottom: 4rem;
+}
+
+.why-choose-section h2,
+.services-section h2 {
+  color: var(--color-content);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.why-choose-section h2::after,
+.services-section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  background-color: var(--color-background);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card h3 {
+  color: var(--color-content);
+  margin-bottom: 1rem;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  background-color: var(--color-background);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid var(--color-accent);
+}
+
+.service-item h3 {
+  color: var(--color-content);
+  margin-bottom: 1rem;
+}
+
+.cta-box {
+  background-color: var(--color-content);
+  color: var(--color-white);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cta-box h3 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.cta-box p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.cta-box .btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-content);
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+.cta-box .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .service-info {
+    padding: 2rem;
+  }
+  
+  .benefits-grid,
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefit-card,
+  .service-item {
+    text-align: center;
+  }
+  
+  .why-choose-section h2::after,
+  .services-section h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .why-choose-section h2,
+  .services-section h2 {
+    text-align: center;
+  }
+  
+  .service-item {
+    border-left: none;
+    border-top: 4px solid var(--color-accent);
+  }
+}

@@ -1,0 +1,142 @@
+.hudvash-page {
+  width: 100%;
+}
+
+.service-details {
+  padding: 4rem 0;
+  background-color: var(--color-background);
+  width: 100%;
+}
+
+.service-info {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-info h2 {
+  margin-bottom: 1.5rem;
+  color: var(--color-content);
+  font-size: 2rem;
+}
+
+.service-info > p,
+.program-overview p,
+.our-approach p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.mission-statement {
+  font-size: 1.2rem !important;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-content);
+  padding: 1.5rem;
+  background-color: rgba(70, 125, 165, 0.1);
+  border-left: 4px solid var(--color-content);
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 3rem !important;
+}
+
+.program-overview,
+.our-approach,
+.staff-structure {
+  margin-bottom: 3rem;
+}
+
+.program-details {
+  background-color: var(--color-background);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.program-details h3 {
+  color: var(--color-content);
+  margin-bottom: 1rem;
+}
+
+.program-details p {
+  margin-bottom: 1.5rem;
+}
+
+.program-details p:last-child {
+  margin-bottom: 0;
+}
+
+.staff-structure {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background-color: var(--color-background);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.team-card h3 {
+  color: var(--color-content);
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.team-card ul {
+  padding-left: 1.5rem;
+}
+
+.team-card li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.cta-box {
+  background-color: var(--color-content);
+  color: var(--color-white);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.cta-box h3 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.cta-box p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.cta-box .btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-content);
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.cta-box .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .service-info {
+    padding: 2rem;
+  }
+  
+  .mission-statement {
+    padding: 1rem;
+  }
+  
+  .staff-structure {
+    grid-template-columns: 1fr;
+  }
+}

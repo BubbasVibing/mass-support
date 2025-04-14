@@ -1,0 +1,248 @@
+.homepage {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 0;
+  background-color: var(--color-background);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-content);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--color-black);
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-content);
+  border: 2px solid var(--color-content);
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-content);
+  color: var(--color-white);
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 400px;
+  background-color: var(--color-content);
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+/* Services Section */
+.services-section {
+  background-color: var(--color-white);
+  padding: 5rem 0;
+  width: 100%;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--color-black);
+  opacity: 0.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.service-card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card h3 {
+  margin-bottom: 1rem;
+  color: var(--color-content);
+}
+
+.service-card p {
+  margin-bottom: 1.5rem;
+  color: var(--color-black);
+  opacity: 0.8;
+}
+
+.service-link {
+  font-weight: 600;
+  color: var(--color-accent);
+  position: relative;
+}
+
+.service-link::after {
+  content: '→';
+  margin-left: 5px;
+  transition: margin 0.3s ease;
+}
+
+.service-link:hover::after {
+  margin-left: 10px;
+}
+
+/* About Section */
+.about-section {
+  background-color: var(--color-background);
+  padding: 5rem 0;
+  width: 100%;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.about-text h2 {
+  margin-bottom: 1.5rem;
+  color: var(--color-content);
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  color: var(--color-black);
+  opacity: 0.8;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--color-content);
+  padding: 5rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-content .btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-content);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+.cta-content .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+  
+  .placeholder-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container, .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-image {
+    order: -1;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .service-card {
+    text-align: center;
+  }
+  
+  .service-icon {
+    margin: 0 auto 1.5rem;
+  }
+  
+  .about-text {
+    text-align: center;
+  }
+}

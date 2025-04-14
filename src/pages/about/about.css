@@ -1,0 +1,388 @@
+.about-page {
+  width: 100%;
+}
+
+.page-header {
+  background-color: var(--color-content);
+  color: var(--color-white);
+  padding: 5rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.page-header h1 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.page-header p {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Company Intro Section */
+.company-intro {
+  padding: 5rem 0;
+  background-color: var(--color-white);
+}
+
+.intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.highlight-text {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: var(--color-content);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(70, 125, 165, 0.2);
+}
+
+.company-overview p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.motto-box {
+  background-color: var(--color-background);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 3rem;
+  border-left: 4px solid var(--color-accent);
+}
+
+.motto-box p {
+  margin-bottom: 1rem;
+}
+
+.motto-box p:last-child {
+  margin-bottom: 0;
+}
+
+.official-motto {
+  font-weight: 600;
+  color: var(--color-content);
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(70, 125, 165, 0.2);
+}
+
+/* Vision Section */
+.vision-section {
+  background-color: var(--color-content);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.vision-content h2 {
+  color: var(--color-white);
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.vision-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--color-white);
+}
+
+.vision-statement {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+/* Company History Section */
+.company-history {
+  padding: 5rem 0;
+  background-color: var(--color-background);
+}
+
+.history-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.history-content h2 {
+  color: var(--color-content);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.history-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+.history-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.history-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* NAICS Section */
+.naics-section {
+  padding: 4rem 0;
+  background-color: var(--color-white);
+}
+
+.naics-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.naics-content h2 {
+  color: var(--color-content);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.naics-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+.naics-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1rem;
+}
+
+.naics-list li {
+  padding: 1rem 1.5rem;
+  background-color: var(--color-background);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.naics-code {
+  font-weight: 600;
+  color: var(--color-content);
+  margin-right: 0.5rem;
+}
+
+/* Leadership Section */
+.leadership-section {
+  padding: 5rem 0;
+  background-color: var(--color-background);
+}
+
+.leadership-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.leadership-content h2 {
+  color: var(--color-content);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.leadership-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+.team-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.leadership-profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.profile-card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header {
+  background-color: var(--color-content);
+  color: var(--color-white);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.profile-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-white);
+  font-size: 1.4rem;
+}
+
+.profile-title {
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  opacity: 0.9;
+}
+
+.profile-education {
+  font-style: italic;
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.profile-description {
+  padding: 1.5rem;
+}
+
+.profile-description p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.profile-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--color-content);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+.cta-content p {
+  color: var(--color-white);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.cta-content .btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-content);
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 4px;
+}
+
+.cta-content .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 3rem 0;
+  }
+  
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .highlight-text {
+    font-size: 1.1rem;
+  }
+  
+  .company-intro,
+  .vision-section,
+  .company-history,
+  .naics-section,
+  .leadership-section {
+    padding: 3rem 0;
+  }
+  
+  .history-content,
+  .profile-header,
+  .profile-description {
+    padding: 1.5rem;
+  }
+  
+  .vision-statement {
+    font-size: 1.3rem;
+  }
+  
+  .naics-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .history-content h2::after,
+  .naics-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .history-content h2,
+  .naics-content h2 {
+    text-align: center;
+  }
+  
+  .motto-box {
+    padding: 1.5rem;
+  }
+}
