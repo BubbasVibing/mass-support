@@ -17,9 +17,4 @@ export default defineConfig({
       },
     },
   },
-  // Ensure correct asset serving on Vercel
-  server: {
-    // Required for SPA routing to work
-    historyApiFallback: true,
-  },
 })
