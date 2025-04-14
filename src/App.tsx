@@ -1,5 +1,6 @@
+import { useEffect } from 'react'
 import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/navbar/navbar'
 import Footer from './components/footer/footer'
 import Homepage from './pages/homepage/homepage'
@@ -11,6 +12,15 @@ import About from './pages/about/about'
 import Contact from './pages/contact/contact'
 
 function App() {
+  // Handle redirect from 404.html
+  useEffect(() => {
+    const redirectPath = sessionStorage.getItem('redirectPath');
+    if (redirectPath) {
+      sessionStorage.removeItem('redirectPath');
+      window.history.replaceState(null, '', redirectPath);
+    }
+  }, []);
+
   return (
     <Router>
       <div className="app">
@@ -24,6 +34,8 @@ function App() {
             <Route path="/services/vocational-services" element={<VocationalServices />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            {/* Catch-all route to redirect to home */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
         <Footer />
