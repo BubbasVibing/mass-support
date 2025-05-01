@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { FiHome, FiStar, FiUsers } from 'react-icons/fi';
 import './about.css';
 
 const About = () => {
@@ -47,17 +48,13 @@ const About = () => {
       <section className="section company-intro" ref={sectionRefs.intro}>
         <div className="content-container">
           <div className="intro-content">
-            <div className="company-image">
-              <img src="/images/placeholder.svg" alt="MASS Headquarters" className="rounded-image" />
-              <div className="image-caption">MASS Corporate Headquarters - Baltimore, MD</div>
-            </div>
             <div className="company-overview">
               <h2 className="section-title">Our Company</h2>
               <p className="highlight-text">Madison Avenue Support Services is a Women, minority and family-owned Small Business with its corporate headquarters located in Baltimore MD.</p>
               
               <div className="key-points">
                 <div className="key-point">
-                  <span className="key-icon">🏢</span>
+                  <span className="key-icon"><FiHome /></span>
                   <div className="key-content">
                     <h4>Federal Contracting</h4>
                     <p>Specialized in HUD VASH, Vocational Services, and expert witness services</p>
@@ -65,7 +62,7 @@ const About = () => {
                 </div>
                 
                 <div className="key-point">
-                  <span className="key-icon">⭐</span>
+                  <span className="key-icon"><FiStar /></span>
                   <div className="key-content">
                     <h4>Quality Solutions</h4>
                     <p>Custom solutions for multimillion-dollar IDIQ contracts</p>
@@ -73,7 +70,7 @@ const About = () => {
                 </div>
                 
                 <div className="key-point">
-                  <span className="key-icon">👥</span>
+                  <span className="key-icon"><FiUsers /></span>
                   <div className="key-content">
                     <h4>Dedicated Teams</h4>
                     <p>Staff solely focused on your project for maximum quality</p>
@@ -142,10 +139,6 @@ const About = () => {
                 <p>To deliver results with compassion, innovation, and a steadfast commitment to the people we serve.</p>
               </div>
             </div>
-            <div className="history-image">
-              <img src="/images/placeholder.svg" alt="Our Mission" className="rounded-image" />
-              <div className="image-caption">Delivering exceptional service since 2017</div>
-            </div>
           </div>
         </div>
       </section>
@@ -193,9 +186,6 @@ const About = () => {
             
             <div className="leadership-profiles">
               <div className="profile-card">
-                <div className="profile-image">
-                  <img src="/images/placeholder.svg" alt="Gloria Aderinokun" />
-                </div>
                 <div className="profile-header">
                   <h3>Gloria Aderinokun</h3>
                   <p className="profile-title">CEO</p>
@@ -211,9 +201,6 @@ const About = () => {
               </div>
               
               <div className="profile-card">
-                <div className="profile-image">
-                  <img src="/images/placeholder.svg" alt="Fatima Disu Reich" />
-                </div>
                 <div className="profile-header">
                   <h3>Fatima Disu Reich</h3>
                   <p className="profile-title">COO</p>

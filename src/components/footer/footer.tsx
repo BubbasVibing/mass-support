@@ -3,7 +3,7 @@ import {
   FiPhone, 
   FiMail
 } from 'react-icons/fi';
-import { FaLinkedin } from 'react-icons/fa';
+import massLogo from '../../assets/images/mass-logeeo-final.png';
 import './footer.css';
 
 const Footer = () => {
@@ -16,12 +16,8 @@ const Footer = () => {
           <div className="footer-content">
             <div className="footer-info">
               <div className="footer-logo">
-                <h2>MASS<span>Solutions</span></h2>
-                <p>Dedicated to serving through quality management and support services. We partner with government agencies to create sustainable solutions.</p>
-                <a href="https://linkedin.com/company/madison-avenue-support-services" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                  <FaLinkedin size={20} />
-                  <span>Follow us on LinkedIn</span>
-                </a>
+                <img src={massLogo} alt="MASS Solutions Logo" className="footer-logo-image" />
+                <p>Quality management and support services for government agencies.</p>
               </div>
             </div>
             

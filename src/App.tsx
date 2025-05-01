@@ -10,6 +10,7 @@ import HudVash from './pages/hudvash/hudvash'
 import VocationalServices from './pages/vocationalservices/vocationalservices'
 import About from './pages/about/about'
 import Contact from './pages/contact/contact'
+import GSASchedule from './pages/gsaschedule/gsaschedule'
 
 function App() {
   // Handle redirect from 404.html
@@ -32,6 +33,7 @@ function App() {
             <Route path="/services/program-management" element={<ProgramManagement />} />
             <Route path="/services/hud-vash" element={<HudVash />} />
             <Route path="/services/vocational-services" element={<VocationalServices />} />
+            <Route path="/gsa-schedule" element={<GSASchedule />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             {/* Catch-all route to redirect to home */}

@@ -1,9 +1,24 @@
 import { useState } from 'react';
-import { FiMapPin, FiPhone, FiMail, FiClock, FiSend } from 'react-icons/fi';
+import { FiMapPin, FiPhone, FiMail, FiClock, FiSend, FiFlag } from 'react-icons/fi';
 import './contact.css';
 
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
+
+interface FormStatus {
+  submitting: boolean;
+  submitted: boolean;
+  error: boolean;
+  message: string | null;
+}
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
@@ -11,7 +26,12 @@ const Contact = () => {
     message: ''
   });
   
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formStatus, setFormStatus] = useState<FormStatus>({
+    submitting: false,
+    submitted: false,
+    error: false,
+    message: null
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -21,25 +41,53 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send the form data to a server
-    console.log('Form Data:', formData);
-    setFormSubmitted(true);
+    setFormStatus({ ...formStatus, submitting: true });
     
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
-    
-    // Reset submission state after 5 seconds
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 5000);
+    try {
+      const response = await fetch('https://formspree.io/f/mqaqevev', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        setFormStatus({
+          submitting: false,
+          submitted: true,
+          error: false,
+          message: 'Thank you! Your message has been sent successfully.'
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setFormStatus({
+          submitting: false,
+          submitted: false,
+          error: true,
+          message: data.error || 'Something went wrong. Please try again later.'
+        });
+      }
+    } catch (error) {
+      setFormStatus({
+        submitting: false,
+        submitted: false,
+        error: true,
+        message: 'Network error. Please check your connection and try again.'
+      });
+    }
   };
 
   return (
@@ -111,13 +159,19 @@ const Contact = () => {
             <div className="contact-form-container">
               <h2>Send a Message</h2>
               
-              {formSubmitted ? (
+              {formStatus.submitted ? (
                 <div className="success-message">
                   <h3>Thank you for your message!</h3>
                   <p>We have received your inquiry and will get back to you shortly.</p>
                 </div>
               ) : (
-                <form className="contact-form" onSubmit={handleSubmit}>
+                <form className="contact-form" onSubmit={handleSubmit} method="POST" action="https://formspree.io/f/mqaqevev">
+                  {formStatus.error && (
+                    <div className="error-message">
+                      <p>{formStatus.message}</p>
+                    </div>
+                  )}
+                  
                   <div className="form-group">
                     <label htmlFor="name">Full Name</label>
                     <input 
@@ -190,9 +244,13 @@ const Contact = () => {
                     ></textarea>
                   </div>
                   
-                  <button type="submit" className="submit-btn">
+                  <button 
+                    type="submit" 
+                    className="submit-btn"
+                    disabled={formStatus.submitting}
+                  >
                     <FiSend />
-                    <span>Send Message</span>
+                    <span>{formStatus.submitting ? 'Sending...' : 'Send Message'}</span>
                   </button>
                 </form>
               )}
@@ -209,7 +267,7 @@ const Contact = () => {
               <div className="location-icon">
                 <FiMapPin size={22} />
               </div>
-              <h3>San Francisco, CA <span className="flag">🇺🇸</span></h3>
+              <h3>San Francisco, CA <span className="flag"><FiFlag /></span></h3>
               <p>Our presence in this iconic city reflects our dedication to being at the forefront of innovation.</p>
             </div>
             
@@ -217,7 +275,7 @@ const Contact = () => {
               <div className="location-icon">
                 <FiMapPin size={22} />
               </div>
-              <h3>Baltimore, MD <span className="flag">🇺🇸</span></h3>
+              <h3>Baltimore, MD <span className="flag"><FiFlag /></span></h3>
               <p>Our company leverages the city's rich history and global influence to drive forward-thinking solutions.</p>
             </div>
             
@@ -225,7 +283,7 @@ const Contact = () => {
               <div className="location-icon">
                 <FiMapPin size={22} />
               </div>
-              <h3>Los Angeles, CA <span className="flag">🇺🇸</span></h3>
+              <h3>Los Angeles, CA <span className="flag"><FiFlag /></span></h3>
               <p>With its diverse talent pool and growing ecosystem, our presence ignites collaboration.</p>
             </div>
           </div>

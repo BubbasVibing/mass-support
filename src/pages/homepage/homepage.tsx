@@ -7,16 +7,15 @@ const Homepage = () => {
       <section className="hero">
         <div className="content-container hero-container">
           <div className="hero-content">
-            <h1>Innovative Housing Solutions for America's Veterans</h1>
-            <p>We partner with government agencies to provide high-quality housing and support services for veterans across the nation.</p>
+            <h1>Innovative Government Support Solutions</h1>
+            <p>We partner with government agencies to provide high-quality program management and support services across the nation.</p>
             <div className="hero-buttons">
               <a href="/services" className="btn-primary">Our Services</a>
-              <a href="/contact" className="btn-secondary">Contact Us</a>
+              <a href="/contact" className="btn-secondary contact-btn">Contact Us</a>
             </div>
           </div>
           <div className="hero-image">
-            {/* This would be an image in production */}
-            <div className="placeholder-image"></div>
+            <img src="/image/americanflag.jpg" alt="American Flag" className="hero-img" />
           </div>
         </div>
       </section>
@@ -65,8 +64,7 @@ const Homepage = () => {
               <a href="/about" className="btn-primary">About Our Company</a>
             </div>
             <div className="about-image">
-              {/* This would be an image in production */}
-              <div className="placeholder-image"></div>
+              <img src="/image/vetimage.jpg" alt="Veteran Support" className="about-img" />
             </div>
           </div>
         </div>

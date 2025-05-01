@@ -25,17 +25,19 @@
   padding: 0 2rem;
 }
 
-.navbar-logo h1 {
-  font-size: 1.8rem;
-  margin: 0;
-  color: var(--color-content);
-  font-weight: 700;
-  letter-spacing: -0.5px;
+.navbar-logo {
+  display: flex;
+  align-items: center;
 }
 
-.navbar-logo span {
-  color: var(--color-accent);
-  font-weight: 300;
+.logo-image {
+  max-height: 80px;
+  width: auto;
+  transition: max-height 0.3s ease;
+}
+
+.scrolled .logo-image {
+  max-height: 65px;
 }
 
 .navbar-menu {
@@ -224,6 +226,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 101;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-toggle:hover {
+    background-color: rgba(36, 152, 225, 0.1);
+  }
+
+  /* Improve the navbar toggle button in mobile view */
+  .navbar.menu-open .navbar-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(36, 152, 225, 0.1);
+    color: var(--color-accent);
+  }
+  
+  .navbar.menu-open .navbar-toggle:hover {
+    background-color: rgba(36, 152, 225, 0.2);
+  }
+  
+  /* Add overlay background */
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 98;
+    backdrop-filter: blur(2px);
   }
   
   .navbar-menu {
@@ -232,15 +268,15 @@
     right: -100%;
     flex-direction: column;
     background-color: var(--color-white);
-    width: 80%;
+    width: 85%;
     max-width: 350px;
     height: 100vh;
-    text-align: center;
+    text-align: left;
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-    padding: 5rem 2rem;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    padding: 5rem 2rem 2rem;
     overflow-y: auto;
-    z-index: 99;
+    z-index: 100;
     justify-content: flex-start;
   }
   
@@ -249,12 +285,12 @@
   }
   
   .navbar-item {
-    margin: 1.5rem 0;
+    margin: 0.8rem 0;
     width: 100%;
   }
   
   .navbar-logo {
-    z-index: 100;
+    z-index: 99;
   }
   
   .navbar-button {
@@ -266,9 +302,10 @@
   }
   
   .navbar-link {
-    justify-content: center;
-    font-size: 1.1rem;
+    justify-content: flex-start;
+    font-size: 1.2rem;
     padding: 0.8rem 0;
+    width: 100%;
   }
   
   /* Mobile dropdown */
@@ -277,7 +314,7 @@
     width: 100%;
     transform: none;
     box-shadow: none;
-    background-color: rgba(36, 152, 225, 0.05);
+    background-color: rgba(36, 152, 225, 0.08);
     border-radius: 10px;
     max-height: 0;
     padding: 0;
@@ -285,7 +322,10 @@
     opacity: 1;
     visibility: visible;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    border-left: 3px solid var(--color-accent);
   }
   
   .dropdown-menu::before {
@@ -304,23 +344,66 @@
   .dropdown.active .dropdown-menu {
     max-height: 500px;
     padding: 0.8rem 0;
+    box-shadow: 0 5px 15px rgba(36, 152, 225, 0.1) inset;
   }
   
   .dropdown-toggle {
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding-left: 0.5rem;
+  }
+  
+  .navbar-item.dropdown.active .dropdown-toggle {
+    color: var(--color-accent);
+    font-weight: 500;
   }
   
   .dropdown-item a {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     font-size: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(36, 152, 225, 0.05);
+    transition: all 0.2s ease;
+  }
+  
+  .dropdown-item:last-child a {
+    border-bottom: none;
+  }
+  
+  .dropdown-item a:hover {
+    padding-left: 1.8rem;
+    background-color: rgba(36, 152, 225, 0.12);
   }
   
   .dropdown-arrow {
     margin-left: 0.3rem;
+    transition: transform 0.3s ease;
+    font-size: 1.3rem;
   }
   
-  /* Add touchstart event handler */
   .dropdown.active .dropdown-arrow {
     transform: rotate(180deg);
   }
+}
+
+.navbar-link.highlight-link {
+  color: var(--color-accent);
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: rgba(36, 152, 225, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-link.highlight-link:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.navbar-link.highlight-link::after {
+  display: none;
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import { IoClose } from 'react-icons/io5';
+import massLogo from '../../assets/images/mass-logeeo-final.png';
 import './navbar.css';
 
 const Navbar = () => {
@@ -46,6 +47,13 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     if (isServicesOpen) setIsServicesOpen(false);
+    document.body.style.overflow = !isMobileMenuOpen ? 'hidden' : '';
+  };
+
+  // Close mobile menu
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    document.body.style.overflow = '';
   };
 
   // Toggle services dropdown only on mobile
@@ -57,10 +65,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isMobileMenuOpen ? 'menu-open' : ''}`}>
+      {isMobileMenuOpen && <div className="mobile-overlay" onClick={closeMobileMenu}></div>}
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo">
-          <h1>MASS <span>Solutions</span></h1>
+          <img src={massLogo} alt="MASS Solutions Logo" className="logo-image" />
         </Link>
         
         <div className="navbar-toggle" onClick={toggleMobileMenu}>
@@ -71,9 +80,9 @@ const Navbar = () => {
           )}
         </div>
         
-        <ul className={`navbar-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        <ul className={`navbar-menu ${isMobileMenuOpen ? 'open' : ''}`} onClick={(e) => e.target === e.currentTarget && closeMobileMenu()}>
           <li className="navbar-item">
-            <Link to="/" className="navbar-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+            <Link to="/" className="navbar-link" onClick={closeMobileMenu}>Home</Link>
           </li>
           
           <li className={`navbar-item dropdown ${isServicesOpen ? 'active' : ''}`} ref={dropdownRef}>
@@ -83,26 +92,35 @@ const Navbar = () => {
             
             <ul className="dropdown-menu">
               <li className="dropdown-item">
-                <Link to="/services" onClick={() => setIsMobileMenuOpen(false)}>All Services</Link>
+                <Link to="/services" onClick={closeMobileMenu}>All Services</Link>
               </li>
               <li className="dropdown-item">
-                <Link to="/services/hud-vash" onClick={() => setIsMobileMenuOpen(false)}>HUD-VASH</Link>
+                <Link to="/services/hud-vash" onClick={closeMobileMenu}>HUD-VASH</Link>
               </li>
               <li className="dropdown-item">
-                <Link to="/services/program-management" onClick={() => setIsMobileMenuOpen(false)}>Program & Project Management</Link>
+                <Link to="/services/program-management" onClick={closeMobileMenu}>Program & Project Management</Link>
               </li>
               <li className="dropdown-item">
-                <Link to="/services/vocational-services" onClick={() => setIsMobileMenuOpen(false)}>Vocational Services</Link>
+                <Link to="/services/vocational-services" onClick={closeMobileMenu}>Vocational Services</Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/gsa-schedule" onClick={closeMobileMenu}>GSA Schedule</Link>
               </li>
             </ul>
           </li>
           
           <li className="navbar-item">
-            <Link to="/about" className="navbar-link" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
+            <Link to="/about" className="navbar-link" onClick={closeMobileMenu}>About Us</Link>
+          </li>
+
+          <li className="navbar-item">
+            <Link to="/gsa-schedule" className="navbar-link" onClick={closeMobileMenu}>
+              GSA Schedule
+            </Link>
           </li>
           
           <li className="navbar-item">
-            <Link to="/contact" className="navbar-link" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+            <Link to="/contact" className="navbar-link" onClick={closeMobileMenu}>Contact</Link>
           </li>
         </ul>
       </div>

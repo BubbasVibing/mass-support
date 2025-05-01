@@ -19,6 +19,19 @@
   flex: 1 1 300px;
 }
 
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo-image {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* Comment out or remove the old text logo styles
 .footer-logo h2 {
   color: var(--color-white);
   margin-bottom: 1.5rem;
@@ -31,43 +44,14 @@
   color: var(--color-accent);
   font-weight: 300;
 }
+*/
 
 .footer-logo p {
   line-height: 1.7;
   opacity: 0.9;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   color: var(--color-white);
-}
-
-.linkedin-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  background-color: var(--color-white);
-  padding: 0.8rem 1.2rem;
-  border-radius: 30px;
-  color: var(--color-content);
-  text-decoration: none;
-  width: fit-content;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  margin: 0 auto;
-}
-
-.linkedin-link:hover {
-  background-color: var(--color-accent);
-  color: var(--color-white);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.linkedin-link:hover span {
-  color: var(--color-white);
-}
-
-.linkedin-link:hover svg {
-  color: var(--color-white);
+  text-align: center;
 }
 
 .footer-links-container {
@@ -204,10 +188,6 @@
   .footer-column h3::after {
     left: 50%;
     transform: translateX(-50%);
-  }
-  
-  .linkedin-link {
-    margin: 0 auto;
   }
   
   .footer-links li.contact-item {

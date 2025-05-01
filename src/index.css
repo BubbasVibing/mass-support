@@ -87,7 +87,7 @@ button:focus-visible {
   max-width: 100%;
   margin: 0;
   padding: 0 2rem;
-}
+  }
 
 /* For sections that need content width constraint */
 .content-container {
