@@ -1,7 +1,7 @@
 import './gsaschedule.css';
 import { useState, FormEvent, ChangeEvent } from 'react';
-import { FiActivity, FiAlertCircle, FiBriefcase, FiList, FiCheck, FiDollarSign, FiCalendar, FiUser, FiTarget, FiMail, FiCheck as FiCheckmark } from 'react-icons/fi';
-import { BiBuildingHouse, BiAnalyse, BiTimeFive } from 'react-icons/bi';
+import { FiActivity, FiAlertCircle, FiBriefcase, FiList, FiCheck, FiDollarSign, FiCalendar, FiUser, FiTarget, FiCheck as FiCheckmark } from 'react-icons/fi';
+import { BiBuildingHouse, BiAnalyse } from 'react-icons/bi';
 import { HiOutlineDocumentReport, HiOutlinePresentationChartBar, HiOutlineUserGroup } from 'react-icons/hi';
 import { FaRegHandshake } from 'react-icons/fa';
 
