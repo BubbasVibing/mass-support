@@ -104,7 +104,7 @@ const Navbar = () => {
                 <Link to="/services/vocational-services" onClick={closeMobileMenu}>Vocational Services</Link>
               </li>
               <li className="dropdown-item">
-                <Link to="/gsa-schedule" onClick={closeMobileMenu}>GSA Schedule</Link>
+                <Link to="/gsa-schedule" onClick={closeMobileMenu}>MASS BD Group</Link>
               </li>
             </ul>
           </li>
@@ -115,7 +115,7 @@ const Navbar = () => {
 
           <li className="navbar-item">
             <Link to="/gsa-schedule" className="navbar-link" onClick={closeMobileMenu}>
-              GSA Schedule
+              MASS BD Group
             </Link>
           </li>
           

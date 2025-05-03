@@ -112,7 +112,7 @@ const GSASchedule = () => {
       <section className="gsa-hero">
         <div className="content-container">
           <div className="gsa-hero-content">
-            <h1><FiActivity className="section-icon" /> MASS BD is LIVE: Start Winning on Your GSA Schedule</h1>
+            <h1><FiActivity className="section-icon" /> MASS BD Group is LIVE: Start Winning on Your GSA Schedule</h1>
             <p className="gsa-hero-subtitle">You did the hard part — now let us help you win work.</p>
           </div>
         </div>
@@ -137,7 +137,7 @@ const GSASchedule = () => {
       {/* Meet MASS BD Section */}
       <section className="gsa-section mass-bd-section">
         <div className="content-container">
-          <h2><FaRegHandshake className="section-icon" /> Meet MASS BD</h2>
+          <h2><FaRegHandshake className="section-icon" /> Meet MASS BD Group</h2>
           
           <div className="mass-bd-intro">
             <div className="mass-bd-text">
@@ -238,16 +238,8 @@ const GSASchedule = () => {
           <div className="pricing-cards">
             <div className="pricing-card highlight">
               <div className="price-tag">
-                <span className="price-label">First client:</span>
-                <span className="price">$500</span>
-                <span className="price-period">/month</span>
-              </div>
-            </div>
-            
-            <div className="pricing-card">
-              <div className="price-tag">
-                <span className="price-label">Standard rate:</span>
-                <span className="price">$1,000</span>
+                <span className="price-label">Professional rate:</span>
+                <span className="price">$1,500</span>
                 <span className="price-period">/month</span>
               </div>
             </div>
@@ -257,7 +249,7 @@ const GSASchedule = () => {
           
           <div className="testimonial">
             <p>"I built this to be accessible. My goal isn't to profit from your success — it's to help you achieve it."</p>
-            <p className="testimonial-author">– Your Name, Founder of MASS</p>
+            <p className="testimonial-author">– Gloria Aderinokun, Founder of MASS</p>
           </div>
         </div>
       </section>
@@ -265,7 +257,7 @@ const GSASchedule = () => {
       {/* Right Fit Section */}
       <section className="gsa-section right-fit-section">
         <div className="content-container">
-          <h2><FiCheck className="section-icon" /> Is MASS BD Right for You?</h2>
+          <h2><FiCheck className="section-icon" /> Is MASS BD Group Right for You?</h2>
           
           <div className="fit-criteria">
             <div className="criteria-card">
@@ -288,7 +280,7 @@ const GSASchedule = () => {
       <section className="gsa-section cta-section">
         <div className="content-container">
           <h2><FiCalendar className="section-icon" /> Book Your Free 15-Minute Strategy Call</h2>
-          <p>Let's talk about your goals and see if MASS BD is a fit for your business.</p>
+          <p>Let's talk about your goals and see if MASS BD Group is a fit for your business.</p>
           
           <div className="cta-buttons">
             <button 

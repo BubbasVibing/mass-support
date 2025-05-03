@@ -202,9 +202,9 @@ const About = () => {
               
               <div className="profile-card">
                 <div className="profile-header">
-                  <h3>Fatima Disu Reich</h3>
+                  <h3>Fatima Disu</h3>
                   <p className="profile-title">COO</p>
-                  <p className="profile-education">Ph.D. from Howard University in Nutrition</p>
+                  <p className="profile-education">MBA and MS in Nutrition</p>
                 </div>
                 <div className="profile-description">
                   <ul className="profile-bullets">
