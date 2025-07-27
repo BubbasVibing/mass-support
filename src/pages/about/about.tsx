@@ -50,7 +50,7 @@ const About = () => {
           <div className="intro-content">
             <div className="company-overview">
               <h2 className="section-title">Our Company</h2>
-              <p className="highlight-text">Madison Avenue Support Services is a Women, minority and family-owned Small Business with its corporate headquarters located in Baltimore MD.</p>
+              <p className="highlight-text">Madison Avenue Support Services (MASS) is a proud WSOB headquartered in Baltimore, Maryland.</p>
               
               <div className="key-points">
                 <div className="key-point">
